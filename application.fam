@@ -1,6 +1,6 @@
 App(
     appid="boilerplate",
-    name="FAP Boilerplate",
+    name="Lonk Playground",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="boilerplate_app",
     cdefines=["APP_BOILERPLATE"],
