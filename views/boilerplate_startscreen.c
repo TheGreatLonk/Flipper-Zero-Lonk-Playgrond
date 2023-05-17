@@ -30,10 +30,10 @@ void boilerplate_startscreen_draw(Canvas* canvas, BoilerplateStartscreenModel* m
     canvas_clear(canvas);
     canvas_set_color(canvas, ColorBlack);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str_aligned(canvas, 64, 10, AlignCenter, AlignTop, "Start Screen"); 
+    canvas_draw_str_aligned(canvas, 64, 10, AlignCenter, AlignTop, "Lonk Playground");
     canvas_set_font(canvas, FontSecondary);
-    canvas_draw_str_aligned(canvas, 64, 22, AlignCenter, AlignTop, "Explain your app"); 
-    canvas_draw_str_aligned(canvas, 64, 32, AlignCenter, AlignTop, "on this screen");
+    canvas_draw_str_aligned(canvas, 64, 22, AlignCenter, AlignTop, "Code testing &");
+    canvas_draw_str_aligned(canvas, 64, 32, AlignCenter, AlignTop, "dumbshit central");
     elements_button_center(canvas, "Start"); 
 }
 

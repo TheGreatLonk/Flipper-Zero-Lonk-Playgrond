@@ -46,7 +46,7 @@ void boilerplate_scene_2_draw(Canvas* canvas, BoilerplateScene2Model* model) {
     canvas_clear(canvas);
     canvas_set_color(canvas, ColorBlack);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str_aligned(canvas, 0, 10, AlignLeft, AlignTop, "Scene 2: Input Examples"); 
+    canvas_draw_str_aligned(canvas, 0, 10, AlignLeft, AlignTop, "INPUT TESTING :D");
     canvas_set_font(canvas, FontSecondary);
     char *strInput = malloc(15);
     strcpy(strInput, buttonText[model->screen_text]);

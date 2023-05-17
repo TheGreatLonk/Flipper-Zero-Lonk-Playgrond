@@ -31,10 +31,10 @@ void boilerplate_scene_1_draw(Canvas* canvas, BoilerplateScene1Model* model) {
     canvas_clear(canvas);
     canvas_set_color(canvas, ColorBlack);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str_aligned(canvas, 0, 10, AlignLeft, AlignTop, "This is Scene 1"); 
+    canvas_draw_str_aligned(canvas, 0, 10, AlignLeft, AlignTop, "Error 404");
     canvas_set_font(canvas, FontSecondary);
-    canvas_draw_str_aligned(canvas, 0, 22, AlignLeft, AlignTop, "An empty scene to be"); 
-    canvas_draw_str_aligned(canvas, 0, 32, AlignLeft, AlignTop, "used as boilerplate"); 
+    canvas_draw_str_aligned(canvas, 0, 22, AlignLeft, AlignTop, "Page Not Found");
+    canvas_draw_str_aligned(canvas, 0, 32, AlignLeft, AlignTop, "(Yet)");
 }
 
 static void boilerplate_scene_1_model_init(BoilerplateScene1Model* const model) {
