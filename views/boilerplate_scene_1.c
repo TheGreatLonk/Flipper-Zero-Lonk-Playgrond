@@ -5,6 +5,9 @@
 #include <gui/elements.h>
 #include <dolphin/dolphin.h>
 
+int x = 0;
+int y = 0;
+
 struct BoilerplateScene1 {
     View* view;
     BoilerplateScene1Callback callback;
@@ -31,10 +34,8 @@ void boilerplate_scene_1_draw(Canvas* canvas, BoilerplateScene1Model* model) {
     canvas_clear(canvas);
     canvas_set_color(canvas, ColorBlack);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str_aligned(canvas, 0, 10, AlignLeft, AlignTop, "Error 404");
-    canvas_set_font(canvas, FontSecondary);
-    canvas_draw_str_aligned(canvas, 0, 22, AlignLeft, AlignTop, "Page Not Found");
-    canvas_draw_str_aligned(canvas, 0, 32, AlignLeft, AlignTop, "(Yet)");
+
+    canvas_draw_str_aligned(canvas, x, y, AlignLeft, AlignTop, ">");
 }
 
 static void boilerplate_scene_1_model_init(BoilerplateScene1Model* const model) {
@@ -57,9 +58,45 @@ bool boilerplate_scene_1_input(InputEvent* event, void* context) {
                     true);
                 break;
             case InputKeyLeft:
+                x -= 1;
+                with_view_model(
+                        instance->view,
+                        BoilerplateScene1Model* model,
+                        {
+                                UNUSED(model);
+                        },
+                        true);
+                break;
             case InputKeyRight:
+                x += 1;
+                with_view_model(
+                        instance->view,
+                        BoilerplateScene1Model* model,
+                        {
+                                UNUSED(model);
+                        },
+                        true);
+                break;
             case InputKeyUp:
+                y -= 1;
+                with_view_model(
+                        instance->view,
+                        BoilerplateScene1Model* model,
+                        {
+                                UNUSED(model);
+                        },
+                        true);
+                break;
             case InputKeyDown:
+                x += 1;
+                with_view_model(
+                        instance->view,
+                        BoilerplateScene1Model* model,
+                        {
+                                UNUSED(model);
+                        },
+                        true);
+                break;
             case InputKeyOk:
                 with_view_model(
                     instance->view,
